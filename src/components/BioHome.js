@@ -28,7 +28,7 @@ class BioHome extends React.Component {
         <p>
           I'm frontend developer at Huawei Technologies and a CS grad based in
           Bangalore. I love building useful things for the web. Here are a few
-          capabilities that I am equiped with.
+          capabilities that I am equipped with.
         </p>
         <ul>
           <li>UI Development</li>

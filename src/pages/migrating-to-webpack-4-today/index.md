@@ -120,7 +120,7 @@ But, there is a built-in replacement in Webpack 4.
 
 You can use the **optimization.splitChunks** API to generate shared chunks. And
 it is also enabled by default. It allows you to specify configurations if you
-have multiple end points in your application.
+have multiple endpoints in your application.
 
 ---
 
