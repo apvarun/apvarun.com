@@ -10,6 +10,7 @@ class Template extends React.Component {
 
     let rootPath = `/`
     let blogPath = `/blog`
+    let projectPath = `/projects`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
     }
@@ -31,6 +32,16 @@ class Template extends React.Component {
           activeStyle={{
             color: '#E0324C',
           }}
+          to={'/projects'}
+          exact
+        >
+          Projects
+        </Link>
+        <Link
+          style={{ paddingRight: '10px' }}
+          activeStyle={{
+            color: '#E0324C',
+          }}
           to={'/blog'}
           exact
         >
@@ -39,7 +50,11 @@ class Template extends React.Component {
       </div>
     )
 
-    if (location.pathname === rootPath || location.pathname === blogPath) {
+    if (
+      location.pathname === rootPath ||
+      location.pathname === blogPath ||
+      location.pathname === projectPath
+    ) {
       header = (
         <h1
           style={{

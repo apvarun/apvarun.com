@@ -1,6 +1,7 @@
 ---
 title: "Firebase + React : Optimizing For The Real World"
 date: "2018-07-25"
+featuredImage: "https://cdn-images-1.medium.com/max/2000/1*h-xRzZOCHk8jTlEa8M42GA.png"
 ---
 
 I started off to build a small web app that showcases the career paths of
