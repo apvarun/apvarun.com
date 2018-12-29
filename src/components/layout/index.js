@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import {Link} from 'gatsby'
 
 import { rhythm, scale } from '../../utils/typography'
@@ -18,32 +18,14 @@ class Template extends React.Component {
     }
 
     let menu = (
-      <div style={{ fontSize: '1rem'}} className="menu">
-        <Link
-          style={{ paddingRight: '10px' }}
-          activeStyle={{
-            color: '#E0324C',
-          }}
-          to={'/'}
-        >
+      <div className="menu">
+        <Link to={'/'} activeClassName="active">
           Home
         </Link>
-        <Link
-          style={{ paddingRight: '10px' }}
-          activeStyle={{
-            color: '#E0324C',
-          }}
-          to={'/projects'}
-        >
+        <Link to={'/projects'} activeClassName="active">
           Projects
         </Link>
-        <Link
-          style={{ paddingRight: '10px' }}
-          activeStyle={{
-            color: '#E0324C',
-          }}
-          to={'/blog'}
-        >
+        <Link to={'/blog'} activeClassName="active">
           Blog
         </Link>
       </div>
@@ -59,21 +41,9 @@ class Template extends React.Component {
           style={{
             ...scale(1.5),
             marginBottom: rhythm(1.5),
-            marginTop: 0,
-            display: 'flex',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
           }}
         >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-              paddingRight: '10px',
-            }}
-            to={'/'}
-          >
+          <Link className="title" to={'/'}>
             apvarun
           </Link>
           {menu}
@@ -83,23 +53,11 @@ class Template extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: 'Montserrat, sans-serif',
             marginTop: 0,
-            marginBottom: rhythm(1),
-            display: 'flex',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
+            marginBottom: rhythm(1)
           }}
         >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-              paddingRight: '10px',
-            }}
-            to={'/'}
-          >
+          <Link className="title" to={'/'}>
             apvarun
           </Link>
           {menu}
@@ -107,17 +65,20 @@ class Template extends React.Component {
       )
     }
     return (
-      <nav
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
+      <Fragment>
+        <nav>
+          {header}
+        </nav>
+        <section 
+          style={{
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            maxWidth: rhythm(25),
+            padding: `${rhythm(0)} ${rhythm(3 / 4)}`,
+          }}>
         {children}
-      </nav>
+        </section>
+      </Fragment>
     )
   }
 }

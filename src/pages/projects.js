@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 import { rhythm } from '../utils/typography'
 
 import ProjectList from '../utils/project-list'
-import styles from './style.module.css'
+import styles from './style.module.scss'
 
 export default (props) => (
   <StaticQuery
@@ -28,6 +28,7 @@ export default (props) => (
           style={{
             marginBottom: rhythm(1 / 2),
           }}
+          className="heading"
         >
           Projects
         </h2>

@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.pageContext.slug}>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
-        <p
+        <small
           style={{
             ...scale(-1 / 5),
             display: 'block',
@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           {post.frontmatter.date}
-        </p>
+        </small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
