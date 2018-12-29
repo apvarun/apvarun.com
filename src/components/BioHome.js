@@ -15,7 +15,7 @@ class BioHome extends React.Component {
       <div
         style={{
           marginBottom: rhythm(2.5),
-          marginTop: rhythm(2),
+          marginTop: rhythm(0),
         }}
       >
         <h2 className="heading">Hey there 👋🏻</h2>

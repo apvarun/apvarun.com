@@ -1,3 +1,7 @@
+a:hover {
+  color: #2c47ff;
+}
+
 nav {
   // height: 150px;
   & > * {
@@ -32,7 +36,8 @@ nav {
         &:hover {
           opacity: 1;
           padding-bottom: 4px;
-          border-bottom: 2px solid #000;
+          border-bottom: 2px solid #2c47ff;
+          color: #2c47ff;
         }
         &.active {
           color: #2c47ff;
@@ -47,16 +52,12 @@ nav {
   }
 }
 
-small {
-  opacity: 0.75;
-  font-style: italic;
-}
-
 ul {
   margin-left: 20px;
 }
 .heading {
   position: relative;
+  margin-top: 10px;
   &::before {
     content: '';
     border: 8px solid #2c47ff;
@@ -74,7 +75,7 @@ ul {
   clip-path: polygon(30% 0%, 90% 5%, 90% 90%, 5% 100%);
 }
 .blog-post-card {
-  padding: 20px;
+  padding: 25px 20px;
   border-radius: 5px;
   box-shadow: 0 9.85px 40px 0 rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -100,4 +101,60 @@ ul {
     padding-bottom: 4px;
     border-bottom: 2px solid #000;
   }
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: 25px;
+  &::after{
+    content: '';
+    border: 1px solid #2c47ff;
+    width: 30px;
+    display: flex;
+    margin: 0 auto;
+  }
+  small {
+    display: block;
+    opacity: 0.75;
+    font-style: italic;
+    margin-top: -10px;
+    span:not(:first-child)::before{
+      content: '\00B7';
+      padding: 0 10px;
+    }
+  }
+}
+.markdown {
+  img {
+    display: flex;
+    margin: 0 auto;
+  }
+  a {
+    color: #2c47ff;
+  }
+  mark {
+    background-color: #d4daff;
+  }
+  p {
+    margin-bottom: 1.25rem;
+  }
+  blockquote {
+    margin-left: 0;
+    border-left: 0.21rem solid #d4daff;
+    color: #636994;
+    padding: 10px 0 10px 20px;
+    p {
+      margin: 0;
+    }
+  }
+}
+hr{ 
+  height: 1px;
+  color: #d4daff;
+  background-color: #d4daff;
+  border: none;
+}
+
+:not(pre) > code[class*="language-"]{
+  padding: 0.5em !important;
 }
