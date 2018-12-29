@@ -33,6 +33,7 @@ nav {
         text-transform: uppercase;
         border-bottom: 2px solid transparent;
         padding-bottom: 8px;
+        color: #434343;
         &:hover {
           opacity: 1;
           padding-bottom: 4px;
@@ -105,7 +106,7 @@ ul {
 
 .post-header {
   text-align: center;
-  margin-bottom: 25px;
+  margin: 75px 0;
   &::after{
     content: '';
     border: 1px solid #2c47ff;
@@ -157,4 +158,10 @@ hr{
 
 :not(pre) > code[class*="language-"]{
   padding: 0.5em !important;
+}
+
+.content-box {
+  li {
+    margin: 0;
+  }
 }

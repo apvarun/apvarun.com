@@ -21,24 +21,24 @@ class BioHome extends React.Component {
         <h2 className="heading">Hey there 👋🏻</h2>
         <p>
           I'm frontend developer at <a href="https://www.springboard.com" target="_blank">Springboard</a> and a CS grad based in
-          Bangalore. I love building useful things for the web. Here are a few
-          capabilities that I am equipped with.
+          Bangalore. I spend my free time learning and building stuff for the web.
         </p>
+        <h3>What I do?</h3>
         <ul>
           <li>UI Development</li>
           <li>Web Performance</li>
           <li>Web Design</li>
-          <li>Tooling development</li>
+          <li>Tooling</li>
         </ul>
         <p>
-          I love minimalistic designs that deliver better user experiences,
+          I love minimalistic designs with subtle transitions that deliver better user experiences,
           rather than fancy graphics &amp; animations.
         </p>
         {/* <h3>#frontend&nbsp;#developer&nbsp;#designer&nbsp;</h3> */}
         <img
           className="profile-pic"
           src="https://avatars.io/twitter/apvarun"
-          alt={`Varun A P`}
+          alt="Varun A P"
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,

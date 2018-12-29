@@ -13,15 +13,15 @@ class Bio extends React.Component {
         }}
       >
         <p>
-          I'm <strong>ναяυη α ρ ⚡️</strong> who lives and works in Bangalore,
+          I'm <strong>ναяυη α ρ ⚡️</strong>, a front-end dev from Bangalore,
           building things for the web.&nbsp;
           <a href="https://twitter.com/apvarun" target="_blank">
             Follow me on Twitter
           </a>
         </p>
         <img
-          src={profilePic}
-          alt={`Varun A P`}
+          src="https://avatars.io/twitter/apvarun"
+          alt="Varun A P"
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,

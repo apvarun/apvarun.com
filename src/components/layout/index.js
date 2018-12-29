@@ -70,6 +70,7 @@ class Template extends React.Component {
           {header}
         </nav>
         <section 
+          className="content-box"
           style={{
             marginLeft: 'auto',
             marginRight: 'auto',
