@@ -1,11 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import {Link} from 'gatsby'
 
-import { rhythm, scale } from '../utils/typography'
+import { rhythm, scale } from '../../utils/typography'
+import './style.scss'
 
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
+
     let header
 
     let rootPath = `/`
@@ -16,14 +18,13 @@ class Template extends React.Component {
     }
 
     let menu = (
-      <div style={{ fontSize: '1rem', fontFamily: "'Patua One',sans-serif" }}>
+      <div style={{ fontSize: '1rem'}} className="menu">
         <Link
           style={{ paddingRight: '10px' }}
           activeStyle={{
             color: '#E0324C',
           }}
           to={'/'}
-          exact
         >
           Home
         </Link>
@@ -33,7 +34,6 @@ class Template extends React.Component {
             color: '#E0324C',
           }}
           to={'/projects'}
-          exact
         >
           Projects
         </Link>
@@ -43,7 +43,6 @@ class Template extends React.Component {
             color: '#E0324C',
           }}
           to={'/blog'}
-          exact
         >
           Blog
         </Link>
@@ -108,7 +107,7 @@ class Template extends React.Component {
       )
     }
     return (
-      <div
+      <nav
         style={{
           marginLeft: 'auto',
           marginRight: 'auto',
@@ -117,8 +116,8 @@ class Template extends React.Component {
         }}
       >
         {header}
-        {children()}
-      </div>
+        {children}
+      </nav>
     )
   }
 }

@@ -22,7 +22,7 @@ class BioHome extends React.Component {
         <h3>#frontend&nbsp;#developer&nbsp;#designer&nbsp;</h3>
         <h4>About me</h4>
         <p>
-          I'm frontend developer at Huawei Technologies and a CS grad based in
+          I'm frontend developer at Springboard and a CS grad based in
           Bangalore. I love building useful things for the web. Here are a few
           capabilities that I am equipped with.
         </p>
