@@ -27,3 +27,9 @@
   max-width: 50%;
   margin: 10px;
 }
+a {
+  color: #434343;
+}
+a:hover {
+  color: #000;
+}

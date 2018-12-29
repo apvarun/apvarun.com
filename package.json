@@ -10,6 +10,7 @@
     "gatsby-plugin-google-analytics": "^1.0.29",
     "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sass": "^2.0.7",
     "gatsby-plugin-sharp": "^1.6.42",
     "gatsby-plugin-sitemap": "^1.2.25",
     "gatsby-plugin-typography": "^1.7.18",
@@ -22,10 +23,11 @@
     "gatsby-transformer-remark": "^1.7.40",
     "gatsby-transformer-sharp": "^1.6.22",
     "lodash": "^4.17.5",
+    "node-sass": "^4.11.0",
     "typeface-merriweather": "0.0.43",
     "typeface-montserrat": "0.0.43",
-    "typography": "^0.16.17",
-    "typography-theme-funston": "^0.15.10"
+    "typography": "^0.16.18",
+    "typography-theme-wordpress-2015": "^0.16.18"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

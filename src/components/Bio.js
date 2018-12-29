@@ -1,9 +1,5 @@
 import React from 'react'
 
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
-
 import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
 
@@ -17,8 +13,8 @@ class Bio extends React.Component {
         }}
       >
         <p>
-          I'm <strong>𝕍𝔸ℝ𝕌ℕ 𝔸 ℙ ⚡</strong> who lives and works in Bangalore,
-          building useful things for everyone.&nbsp;
+          I'm <strong>ναяυη α ρ ⚡️</strong> who lives and works in Bangalore,
+          building things for the web.&nbsp;
           <a href="https://twitter.com/apvarun" target="_blank">
             Follow me on Twitter
           </a>
