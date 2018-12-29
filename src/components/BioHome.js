@@ -34,7 +34,7 @@ class BioHome extends React.Component {
         </ul>
         <p>
           I love minimalistic designs that deliver better user experiences,
-          rather than fancy graphics & animations.
+          rather than fancy graphics &amp; animations.
         </p>
         <img
           src={profilePic}
