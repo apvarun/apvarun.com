@@ -15,6 +15,7 @@ export default ( props ) => (
         site {
           siteMetadata {
             title
+            description
           }
         }
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -38,7 +39,9 @@ export default ( props ) => (
       // console.log(posts)
       return(
         <Layout location={props.location}>
-          <Helmet titleTemplate={`%s | ${data.site.siteMetadata.title}`} defaultTitle={data.site.siteMetadata.title} />
+          <Helmet titleTemplate={`%s | ${data.site.siteMetadata.title}`} defaultTitle={data.site.siteMetadata.title}>
+            <meta name="description" content={data.site.siteMetadata.description} />
+          </Helmet>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (

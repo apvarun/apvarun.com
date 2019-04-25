@@ -17,13 +17,16 @@ export default (props) => (
         site {
           siteMetadata {
             title
+            description
           }
         }
       }
     `}
     render={data => (
       <Layout location={props.location}>
-        <Helmet titleTemplate={`%s | ${data.site.siteMetadata.title}`} defaultTitle={data.site.siteMetadata.title} />
+        <Helmet titleTemplate={`%s | ${data.site.siteMetadata.title}`} defaultTitle={data.site.siteMetadata.title}>
+          <meta name="description" content={data.site.siteMetadata.description} />
+        </Helmet>
         <h2
           style={{
             marginBottom: rhythm(1 / 2),

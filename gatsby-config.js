@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'I am Varun A P | Frontend 👨‍💻 Developer, ❤️ UI Designing',
+    title: 'Varun A P | Frontend Developer, UI Design enthusiast',
     author: 'Varun A P',
-    description: 'Frontend Developer from Bangalore, IN',
+    description: 'Frontend JavaScript Developer from Bangalore building things for the web.',
     siteUrl: 'https://apvarun.com',
   },
   pathPrefix: '/',

@@ -6,7 +6,7 @@ import get from 'lodash/get'
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
-import "prismjs/themes/prism-okaidia.css"
+import "./prism-dracula.css"
 // import "prismjs/plugins/line-numbers/prism-line-numbers.css"
 
 class BlogPostTemplate extends React.Component {
@@ -18,7 +18,9 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.pageContext.slug}>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`}>
+          <meta name="description" content={this.props.data.site.siteMetadata.description} />
+        </Helmet>
         <div className="post-header">
           <h1>{post.frontmatter.title}</h1>
           <small style={{...scale(-1 / 5)}}>
@@ -71,6 +73,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        description
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
