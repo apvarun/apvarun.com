@@ -3,9 +3,9 @@ title: "Let's talk about CSS Subgrids"
 date: "2019-06-09"
 ---
 
-CSS Subgrid is a part fo <a href="https://www.w3.org/TR/css-grid-2/" taregt="_blank">CSS Grid Level 2 Spec</a> by CSS working group. It solves a common use case which wasn't so obvious when grids were launched. Lets dig deep into what it is!
+CSS Subgrid is a part of <a href="https://www.w3.org/TR/css-grid-2/" target="_blank">CSS Grid Level 2 Spec</a> by CSS working group. It solves a common use case which wasn't so obvious when grids were launched. Let's dig deep into what it is!
 
-CSS grids are primary used for building complex layours for the web. And when you start building such layouts, there would be use-cases where you would want to use grids for child compoennts as well. This is great! But there is one non-obvious thing that happens when you do so.
+CSS grids are primary used for building complex layouts for the web. And when you start building such layouts, there would be use-cases where you would want to use grids for child components as well. This is great! But there is one non-obvious thing that happens when you do so.
 
 Each time you write `display: grid`, a new grid context is created which is totally unaware of the parent grid.
 
@@ -17,7 +17,7 @@ Here is an example of a two-column grid container with two child elements.
 
 ![Grid without subgrid](./grid with child.png)
 
-In this case, the two cards are a part of grid and are aligned properly. But in you see the content of the grid, they are alligned differently for each other although the card itself is a grid.
+In this case, the two cards are a part of grid and are aligned properly. But in you see the content of the grid, they are aligned differently for each other although the card itself is a grid.
 
 ```css
 /* Styles for grid without subgrid */
