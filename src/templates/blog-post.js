@@ -18,8 +18,20 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.pageContext.slug}>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`}>
-          <meta name="description" content={this.props.data.site.siteMetadata.description} />
+        <Helmet title={`${post.frontmatter.title} | Varun A P`}>
+          <meta name="description" content={post.excerpt} />
+
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}/${this.props.pageContext.slug}`} />
+          <meta property="og:title" content={`${post.frontmatter.title} | Varun A P`} />
+          <meta property="og:description" content={post.excerpt} />
+          {post.frontmatter.featuredImage && <meta property="og:image" content={post.frontmatter.featuredImage} />}
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content={`${this.props.data.site.siteMetadata.siteUrl}/${this.props.pageContext.slug}`} />
+          <meta property="twitter:title" content={`${post.frontmatter.title} | Varun A P`} />
+          <meta property="twitter:description" content={post.excerpt} />
+          {post.frontmatter.featuredImage && <meta property="twitter:image" content={post.frontmatter.featuredImage} />}
         </Helmet>
         <div className="post-header">
           <h1>{post.frontmatter.title}</h1>
@@ -74,11 +86,13 @@ export const pageQuery = graphql`
         title
         author
         description
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
