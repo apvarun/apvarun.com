@@ -28,6 +28,7 @@ export default ( props ) => (
               frontmatter {
                 date(formatString: "DD MMMM, YYYY")
                 title
+                featuredImage
               }
             }
           }
@@ -52,6 +53,7 @@ export default ( props ) => (
                   </Link>
                 </h3>
                 <small>{node.frontmatter.date}</small>
+                {node.frontmatter.featuredImage && <img src={node.frontmatter.featuredImage} alt={title} />}
                 <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               </div>
             )
