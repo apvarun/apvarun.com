@@ -148,6 +148,15 @@ export default {
         underline_color: '#00b09b',
         button: '#0f887c',
       },
+      {
+        name: 'Poppy JS',
+        excerpt: 'Simple, Multipurpose Open Source Pop-in Messages for marketers, freelancers and hobbyists.',
+        link: 'https://github.com/apvarun/poppyjs',
+        image: '/static/poppyjs.png',
+        color: 'linear-gradient(135deg, #fdd54f, #f8049c)',
+        underline_color: '#fdd54f',
+        button: '#0f887c',
+      },
     ],
   }),
 }

@@ -93,7 +93,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 800px;
+  max-width: 960px;
 }
 .name {
   font-weight: 700;

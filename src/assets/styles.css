@@ -6,9 +6,19 @@ html, body {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
-img {
+img, .postContent iframe {
   max-width: 100%;
 }
-code.language-text {
+.layout :not(pre) > code[class*="language-"] {
   padding: 2px 10px;
+}
+blockquote {
+  margin-left: 10px;
+  border-left: .25rem solid #357bf3;
+  color: #357bf3;
+  padding: 0 0 0 10px;
+}
+.postContent img {
+  display: block;
+  margin: 0 auto;
 }

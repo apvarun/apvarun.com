@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <g-link to="/blog" class="back-link">← Back to all posts</g-link>
-    <h2>{{$page.post.title}}</h2>
-    <p>Published in {{$page.post.date}} | {{$page.post.timeToRead}}-minute read</p>
+    <h2 class="title">{{$page.post.title}}</h2>
+    <p class="sub-text">Published in {{$page.post.date}} | {{$page.post.timeToRead}}-minute read</p>
     <div class="postContent" v-html="$page.post.content"/>
   </Layout>
 </template>
@@ -38,5 +38,12 @@ export default {
 }
 .back-link:hover {
   color: black;
+}
+.title {
+  margin-bottom: 0;
+}
+.sub-text {
+  margin: 0 0 2rem;
+  color: #757575;
 }
 </style>

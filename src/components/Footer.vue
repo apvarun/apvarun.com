@@ -18,7 +18,7 @@ export default {
   border-bottom: 1px solid #F0F0F0;
   margin: 0 auto 20px;
   padding: 10px;
-  max-width: 800px;
+  max-width: 960px;
 }
 .footnote {
   color: #757575;

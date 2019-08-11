@@ -38,6 +38,6 @@ export default {
   margin: 0 auto;
   display: block;
   margin-top: -4rem;
-  filter: hue-rotate(-25deg);
+  filter: hue-rotate(-25deg) brightness(1.2);
 }
 </style>
