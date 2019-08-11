@@ -103,7 +103,7 @@ export default {
         name: "StarterGrid",
         excerpt:
           "Handpicked Collection of starter boilerplates for your next side-project, be it with React, Vue, Node, Meteor, Backbone etc.",
-        link: "https://startergrid.co/",
+        link: "https://startergrid.apvarun.com/",
         image: "/static/StarterGrid.jpeg",
         color: "linear-gradient(135deg,#F5515F,#A1051D)",
         button: "#fc3c3c"

@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <h1 class="page-heading">About Me</h1>
+    <img src="https://avatars.io/twitter/apvarun" alt="Varun" class="picture" />
     <p>
       I'm frontend developer at <a href="https://www.springboard.com" target="_blank">Springboard</a> based in
       Bangalore. I spend my free time learning and building stuff for the web.
@@ -30,5 +31,13 @@ export default {
 .page-heading {
   text-align: center;
   margin: 5rem;
+}
+.picture {
+  border-radius: 5px;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+  margin-top: -4rem;
+  filter: hue-rotate(-25deg);
 }
 </style>

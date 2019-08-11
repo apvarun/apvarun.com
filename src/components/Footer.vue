@@ -16,7 +16,7 @@ export default {
 <style scoped>
 .footer-container {
   border-bottom: 1px solid #F0F0F0;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   padding: 10px;
   max-width: 800px;
 }
