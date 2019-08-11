@@ -3,20 +3,26 @@
     <h1 class="page-heading">Work</h1>
     <div class="projects">
       <fragment v-for="(projectItem, index) in projects" v-bind:key="index">
-        <a v-bind:href="projectItem.link"
-          target="_blank"
-          rel="noopener"
-        >
+        <a v-bind:href="projectItem.link" target="_blank" rel="noopener">
           <div class="project-item" v-bind:class="{ inverted: index % 2 }">
             <div>
+              <div class="count">{{ index+1 | padleft }}</div>
               <h2 class="title">{{ projectItem.name }}</h2>
-              <p>{{ projectItem.excerpt }}</p>
-              <a v-bind:href="projectItem.link" rel="noopener" target="_blank" class="project-link">Visit Project →</a>
+              <span class="swiggle">
+                <SwiggleShape v-bind:color="projectItem.underline_color" />
+              </span>
+              <p class="excerpt">{{ projectItem.excerpt }}</p>
+              <a
+                v-bind:href="projectItem.link"
+                rel="noopener"
+                target="_blank"
+                class="project-link"
+              >Visit Project →</a>
             </div>
             <g-image v-bind:src="projectItem.image" />
           </div>
         </a>
-        <div class="join-line"  v-bind:class="{ inverted: !(index % 2) }"/>
+        <div class="join-line" v-bind:class="{ inverted: !(index % 2) }" />
       </fragment>
     </div>
   </Layout>
@@ -41,7 +47,7 @@
 }
 .project-item.inverted > img {
   grid-column: 1;
-  grid-row: 1
+  grid-row: 1;
 }
 .project-item > div {
   display: flex;
@@ -53,16 +59,25 @@
   font-weight: 700;
   margin: 0;
 }
+.count {
+  font-weight: 100;
+  font-size: 2rem;
+}
+.excerpt {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 .project-link {
   color: #757575;
+  text-align: right;
 }
 .project-link:hover {
   color: black;
 }
 .join-line {
   width: 2px;
-  height: 25px;
-  background-color: #F0F0F0;
+  height: 40px;
+  background-color: #f0f0f0;
   margin: 0 auto;
   transform: skewX(45deg);
 }
@@ -72,52 +87,68 @@
 .join-line:last-child {
   display: none;
 }
+.swiggle {
+  margin-top: -10px;
+}
 @media only screen and (max-width: 480px) {
   .project-item {
     grid-template-columns: 1fr;
   }
   .project-item > img {
     grid-column: 1;
-    grid-row: 1
+    grid-row: 1;
   }
 }
 </style>
 
 <script>
+import SwiggleShape from '../components/SwiggleShape'
+
 export default {
+  components: {
+    SwiggleShape,
+  },
   metaInfo: {
-    title: "Work - Varun A P"
+    title: 'Work - Varun A P',
+  },
+  filters: {
+    padleft: (value) => {
+      return ('00'+value).slice(-2);
+    }
   },
   data: () => ({
     projects: [
       {
-        name: "Gradients Party",
+        name: 'Gradients Party',
         excerpt:
-          "Collection 🗃️ of gradients for your buttons. It allows to filter based on colors, autoprefix and copy CSS for the gradient, edit the gradient in realtime and more.",
-        link: "https://gradients.party/",
-        image: "/static/GradientsParty.jpeg",
-        color: "linear-gradient(135deg,#6253E1,#04BEFE)",
-        button: "#1f3bed"
+          'Collection 🗃️ of gradients for your buttons. It allows to filter based on colors, autoprefix and copy CSS for the gradient, edit the gradient in realtime and more.',
+        link: 'https://gradients.party/',
+        image: '/static/GradientsParty.jpeg',
+        color: 'linear-gradient(135deg,#6253E1,#04BEFE)',
+        underline_color: '#6253E1',
+        button: '#1f3bed',
       },
       {
-        name: "StarterGrid",
+        name: 'StarterGrid',
         excerpt:
-          "Handpicked Collection of starter boilerplates for your next side-project, be it with React, Vue, Node, Meteor, Backbone etc.",
-        link: "https://startergrid.apvarun.com/",
-        image: "/static/StarterGrid.jpeg",
-        color: "linear-gradient(135deg,#F5515F,#A1051D)",
-        button: "#fc3c3c"
+          'Handpicked Collection of starter boilerplates for your next side-project, be it with React, Vue, Node, Meteor, Backbone etc.',
+        link: 'https://startergrid.apvarun.com/',
+        image: '/static/StarterGrid.jpeg',
+        color: 'linear-gradient(135deg,#F5515F,#A1051D)',
+        underline_color: '#F5515F',
+        button: '#fc3c3c',
       },
       {
-        name: "Toastify JS",
+        name: 'Toastify JS',
         excerpt:
-          "Pure JavaScript library for highly customizable notification messages, with support for multiple stacked notifications.",
-        link: "https://github.com/apvarun/toastify-js",
-        image: "/static/toastify-js.png",
-        color: "linear-gradient(135deg, #00b09b, #96c93d)",
-        button: "#0f887c"
-      }
-    ]
-  })
-};
+          'Pure JavaScript library for highly customizable notification messages, with support for multiple stacked notifications.',
+        link: 'https://github.com/apvarun/toastify-js',
+        image: '/static/toastify-js.png',
+        color: 'linear-gradient(135deg, #00b09b, #96c93d)',
+        underline_color: '#00b09b',
+        button: '#0f887c',
+      },
+    ],
+  }),
+}
 </script>
