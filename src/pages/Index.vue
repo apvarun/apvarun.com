@@ -11,6 +11,8 @@
         <g-link class="link" to="/about">whoami <span>→</span></g-link>
       </div>
 
+      <g-image src="~/assets/illustration.png" />
+
       <!-- <div class="cards">
         <div class="card">
           <g-image src="~/assets/logos/react.png" width="500" title="React JS" />
@@ -41,10 +43,13 @@ export default {
   padding: 2rem 0 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-image: url(/background.png);
+  background-size: cover;
 }
 .content h1 {
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
+  line-height: 1.2;
 }
 .link {
   font-size: 18px;
@@ -89,6 +94,9 @@ export default {
 @media only screen and (max-width: 480px) {
   .content {
     grid-template-columns: 1fr;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 2rem 20px 3rem;
   }
 }
 </style>
