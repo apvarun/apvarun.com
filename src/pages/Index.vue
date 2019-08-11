@@ -31,7 +31,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Varun A P - Frontend Developer - Bangalore'
+    title: 'Varun A P'
   }
 }
 </script>

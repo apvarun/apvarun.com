@@ -1,7 +1,11 @@
 node_modules/
+
 public
+dist
+
 .gatsby-context.js
 .DS_Store
 .intermediate-representation/
 .cache/
+.temp/
 package-lock.json

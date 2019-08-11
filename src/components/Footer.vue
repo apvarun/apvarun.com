@@ -17,7 +17,7 @@ export default {
 .footer-container {
   border-bottom: 1px solid #F0F0F0;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 10px;
   max-width: 800px;
 }
 .footnote {

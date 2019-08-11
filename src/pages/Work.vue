@@ -72,6 +72,15 @@
 .join-line:last-child {
   display: none;
 }
+@media only screen and (max-width: 480px) {
+  .project-item {
+    grid-template-columns: 1fr;
+  }
+  .project-item > img {
+    grid-column: 1;
+    grid-row: 1
+  }
+}
 </style>
 
 <script>
