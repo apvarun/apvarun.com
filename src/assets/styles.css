@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+}
+code.language-text {
+  padding: 2px 10px;
+}
