@@ -2,6 +2,7 @@
 title: "Beyond this year: 2019 goals"
 date: "2018-12-30"
 excerpt: "As the year comes to an end, it's time to look back at the events and improve upon it. 2018 has been a roller-coaster with a lot of new experiences. I have learnt so many things, development to design and more."
+featuredImage: 
 ---
 
 As the year comes to an end, it's time to look back at the events and improve upon it. 2018 has been a roller-coaster with a lot of new experiences. I have learnt so many things, development to design and more.

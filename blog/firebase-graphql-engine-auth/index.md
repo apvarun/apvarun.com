@@ -2,6 +2,7 @@
 title: "Auth for Hasura GraphQL engine with Firebase - My thoughts"
 date: "2019-04-25"
 excerpt: "Hasura’s GraphQL engine is itself a drop-in backend for most of the use cases. It provides you the flexibility to setup a fully functional backend with GraphQL as interface for the front-end. It acts as a layer between the Postgres database and your frontend applications(web or mobile)."
+featuredImage: 
 ---
 
 Hasura’s GraphQL engine is itself a drop-in backend for most of the use cases. It provides you the flexibility to setup a fully functional backend with GraphQL as interface for the front-end. It acts as a layer between the Postgres database and your frontend applications(web or mobile).

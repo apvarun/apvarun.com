@@ -3,6 +3,7 @@ title: "Migrating to Webpack 4 today"
 date: "2018-07-26"
 excerpt: "Today, I made a switch to Webpack 4 from version 3 for a project I am working
 on. And my first impression? Its definitely fast! Here are the changes I made for the switch."
+featuredImage: 
 ---
 
 ![](https://cdn-images-1.medium.com/max/1500/1*oJj7VCITmRw4VLRm_ud8Sw.png)

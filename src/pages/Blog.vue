@@ -26,6 +26,7 @@ query Blog($page: Int) {
         date (format: "D MMMM YYYY")
         path
         excerpt
+        featuredImage
       }
     }
   }

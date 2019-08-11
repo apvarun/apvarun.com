@@ -2,6 +2,7 @@
 title: "Let's talk about CSS Subgrids"
 date: "2019-06-09"
 excerpt: "CSS Subgrid is a part of CSS Grid Level 2 Spec by CSS working group. It solves a common use case which wasn't so obvious when grids were launched. Let's dig deep into what it is!"
+featuredImage: 
 ---
 
 CSS Subgrid is a part of <a href="https://www.w3.org/TR/css-grid-2/" target="_blank">CSS Grid Level 2 Spec</a> by CSS working group. It solves a common use case which wasn't so obvious when grids were launched. Let's dig deep into what it is!

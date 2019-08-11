@@ -2,6 +2,7 @@
 title: "You should start using Parcel Bundler 📦"
 date: "2018-07-27"
 excerpt: "I've been working on a couple of React projects recently, which uses Webpack for bundling. And yes, it takes a lot of time for bundling. So I decided to try out Parcel and here's what happened."
+featuredImage: 
 ---
 
 Parcel is module bundler that requires no initial configuration for to get it running. It is also dubbed as **zero configuration web application bundler** for the same reason, unlike Webpack which requires manual configuration.
