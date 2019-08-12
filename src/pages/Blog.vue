@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="page-heading">Blog</h1>
+    <h1 class="page-heading">Blog <BlogIcon /></h1>
     <section class="posts">
       <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
       <Pager :info="$page.allPost.pageInfo" :linkClass="'page-link'"/>
@@ -36,11 +36,13 @@ query Blog($page: Int) {
 <script>
 import PostList from "../components/PostList"
 import { Pager } from 'gridsome'
+import BlogIcon from '../assets/icons/blog-icon.svg'
 
 export default {
   components: {
     PostList,
-    Pager
+    Pager,
+    BlogIcon,
   },
   metaInfo: {
     title: 'Blog - Varun A P'
@@ -52,6 +54,9 @@ export default {
 .page-heading {
   text-align: center;
   margin: 5rem;
+}
+.page-heading svg {
+  margin-bottom: -5px;
 }
 .page-link {
   padding: 10px 20px;

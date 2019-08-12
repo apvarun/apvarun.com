@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="page-heading">Work</h1>
+    <h1 class="page-heading">Work <WorkIcon /></h1>
     <div class="projects">
       <fragment v-for="(projectItem, index) in projects" v-bind:key="index">
         <a v-bind:href="projectItem.link" target="_blank" rel="noopener">
@@ -32,6 +32,9 @@
 .page-heading {
   text-align: center;
   margin: 5rem;
+}
+.page-heading svg {
+  margin-bottom: -5px;
 }
 .projects a {
   text-decoration: none;
@@ -103,10 +106,12 @@
 
 <script>
 import SwiggleShape from '../components/SwiggleShape'
+import WorkIcon from '../assets/icons/work-icon.svg'
 
 export default {
   components: {
     SwiggleShape,
+    WorkIcon,
   },
   metaInfo: {
     title: 'Work - Varun A P',

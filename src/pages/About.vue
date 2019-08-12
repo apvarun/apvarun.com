@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="page-heading">About Me</h1>
+    <h1 class="page-heading">About Me <MeIcon /></h1>
     <img src="https://avatars.io/twitter/apvarun" alt="Varun" class="picture" />
     <p>
       I'm frontend developer at <a href="https://www.springboard.com" target="_blank">Springboard</a> based in
@@ -20,7 +20,12 @@
 </template>
 
 <script>
+import MeIcon from '../assets/icons/me-icon.svg'
+
 export default {
+  components: {
+    MeIcon,
+  },
   metaInfo: {
     title: 'About me - Varun A P'
   }
@@ -31,6 +36,9 @@ export default {
 .page-heading {
   text-align: center;
   margin: 5rem;
+}
+.page-heading svg {
+  margin-bottom: -5px;
 }
 .picture {
   border-radius: 5px;
