@@ -31,7 +31,7 @@ export default {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   margin-bottom: 15px;
-  border-bottom: 1px solid #F0F0F0;
+  border-bottom: 1px solid var(--lighter);
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-gap: 20px;
@@ -40,22 +40,23 @@ export default {
   grid-template-columns: 1fr;
 }
 .post-card:hover {
-  box-shadow: 0 5px 40px 0 rgba(0,0,0,.08);
+  box-shadow: var(--default-box-shadow);
 }
 /* .line {
-  background-color: #F0F0F0;
+  background-color: var(--lighter);
   border: none;
   height: 1px;
 } */
 .date {
   margin: 0;
-  color: #757575;
+  color: var(--light);
 }
 .title {
   margin-top: 0;
   margin-bottom: 10px;
 }
 img {
+  min-height: 200px;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -68,6 +69,7 @@ img {
   img {
     width: auto;
     height: auto;
+    min-height: auto;
   }
 }
 </style>

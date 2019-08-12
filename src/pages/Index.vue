@@ -43,6 +43,7 @@ export default {
   padding: 2rem 0 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   background-image: url(/background.png);
   background-size: cover;
 }
@@ -55,10 +56,10 @@ export default {
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 .link:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--text-color);
 }
 .link:hover span {
   animation: 400ms move infinite ease-in-out alternate;
@@ -80,7 +81,7 @@ export default {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(200, 200, 200, 0.25);
-  background-color: white;
+  background-color: var(--background-color);
   margin-top: -50px;
 }
 .card img {

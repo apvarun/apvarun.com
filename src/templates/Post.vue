@@ -34,16 +34,16 @@ export default {
 }
 .back-link {
   text-decoration: none;
-  color: #757575;
+  color: var(--light);
 }
 .back-link:hover {
-  color: black;
+  color: var(--text-color);
 }
 .title {
   margin-bottom: 0;
 }
 .sub-text {
   margin: 0 0 2rem;
-  color: #757575;
+  color: var(--light);
 }
 </style>
