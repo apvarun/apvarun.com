@@ -21,7 +21,7 @@ html.dark {
   --text-color: white;
   --background-color: #141d26;
   --light: #8c959e;
-  --lighter: #4a4a4a;
+  --lighter: #2f2f2f;
   --default-box-shadow: 0 5px 40px 0 rgba(100,100,100,.25);
   --default-box-shadow: 0 5px 40px 0 rgba(0,0,0,0.75);
 }
