@@ -71,16 +71,16 @@
   margin-bottom: 20px;
 }
 .project-link {
-  color: #757575;
+  color: var(--light);
   text-align: right;
 }
 .project-link:hover {
-  color: black;
+  color: var(--text-color);
 }
 .join-line {
   width: 2px;
   height: 40px;
-  background-color: #f0f0f0;
+  background-color: var(--lighter);
   margin: 0 auto;
   transform: skewX(45deg);
 }

@@ -1,11 +1,11 @@
 <template>
-  <fragment>
+  <div class="layout-container">
     <NavBar />
     <div class="layout">
       <slot/>
     </div>
     <Footer />
-  </fragment>
+  </div>
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .layout {
   max-width: 960px;
   margin: 4rem auto;

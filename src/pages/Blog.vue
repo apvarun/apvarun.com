@@ -62,13 +62,13 @@ export default {
   padding: 10px 20px;
   margin: 2px 5px;
   border-radius: 2px;
-  border: 1px solid #F0F0F0;
+  border: 1px solid var(--lighter);
   text-decoration: none;
   transition: 200ms ease-in all;
 }
 .page-link.active, .page-link:hover {
-  background-color: #F0F0F0;
-  color: black;
+  background-color: var(--lighter);
+  color: var(--text-color);
 }
 nav {
   text-align: center;

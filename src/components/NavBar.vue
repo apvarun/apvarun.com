@@ -17,6 +17,9 @@
             Blog
           </g-link>
         </li>
+        <div class="is_mobile">
+          <DarkMode />
+        </div>
       </ul>
 
       <div class="social-icons">
@@ -30,6 +33,9 @@
         >
           <component :is="linkItem.icon" />
         </a>
+        <div class="is_desktop">
+          <DarkMode />
+        </div>
       </div>
     </nav>
   </div>
@@ -40,8 +46,12 @@ import TwitterIcon from '../assets/icons/twitter.svg'
 import GithubIcon from '../assets/icons/github.svg'
 import DribbbleIcon from '../assets/icons/dribbble.svg'
 import CodepenIcon from '../assets/icons/codepen.svg'
+import DarkMode from "../components/DarkMode"
 
 export default {
+  components: {
+    DarkMode
+  },
   data: () => ({
     navigationLinks: [
       {
@@ -85,7 +95,7 @@ export default {
 
 <style scoped>
 .nav-container {
-  border-bottom: 1px solid #F0F0F0;
+  border-bottom: 1px solid var(--lighter);
 }
 nav {
   margin: 0 auto;
@@ -100,7 +110,7 @@ nav {
   font-size: 24px;
 }
 .name a {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
   padding-right:20px;
 }
@@ -118,12 +128,12 @@ li a {
   padding: 15px 0;
   font-weight: 100;
   text-decoration: none;
-  color: inherit;
+  color: var(--text-color);
   border-bottom: 2px solid transparent;
 }
 li a.active {
   font-weight: 700;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--text-color);
 }
 .social-icons {
   display: flex;
@@ -138,11 +148,14 @@ li a.active {
   padding-top: 6px;
 }
 .social-icons svg path {
-  fill: #757575;
+  fill: var(--light);
   transition: 150ms ease-in fill;
 }
 .social-icons svg:hover path {
-  fill: inherit;
+  fill: var(--text-color);
+}
+.is_mobile {
+  display: none;
 }
 @media only screen and (max-width: 480px) {
   .social-icons {
@@ -150,6 +163,13 @@ li a.active {
   }
   li a {
     font-size: 14px;
+  }
+  .is_desktop {
+    display: none;
+  }
+  .is_mobile {
+    display: flex;
+    align-items: center;
   }
 }
 </style>

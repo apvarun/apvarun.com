@@ -15,13 +15,13 @@ export default {
 
 <style scoped>
 .footer-container {
-  border-bottom: 1px solid #F0F0F0;
+  border-bottom: 1px solid var(--lighter);
   margin: 0 auto 20px;
   padding: 10px;
   max-width: 960px;
 }
 .footnote {
-  color: #757575;
+  color: var(--light);
   font-size: 14px;
   margin: 0;
   text-align: right;
