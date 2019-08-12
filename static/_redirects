@@ -1,0 +1,10 @@
+# Redirects for projects page
+/projects/ /work
+
+# Redirects for blog posts
+/firebase-react-optimizing-for-the-real-world/ /blog/firebase-react-optimizing-for-the-real-world
+/migrating-to-webpack-4-today/ /blog/migrating-to-webpack-4-today
+/start-using-parcel-bundler/ /blog/start-using-parcel-bundler
+/2018-year-goals/ /blog/2018-year-goals
+/firebase-graphql-engine-auth/ /blog/firebase-graphql-engine-auth
+/lets-talk-about-css-subgrids/ /blog/lets-talk-about-css-subgrids
