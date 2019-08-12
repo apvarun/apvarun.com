@@ -157,6 +157,15 @@ export default {
         underline_color: '#fdd54f',
         button: '#0f887c',
       },
+      {
+        name: 'Confs.space',
+        excerpt: 'Confs.Space is a platform to stash all the conference talks and showcase it with ease of access.',
+        link: 'https://confs.space/',
+        image: '/static/confs-space.png',
+        color: 'linear-gradient(135deg, #f74646, #1060ff)',
+        underline_color: '#f74646',
+        button: '#0f887c',
+      },
     ],
   }),
 }
