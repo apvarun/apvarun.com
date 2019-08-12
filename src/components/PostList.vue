@@ -1,7 +1,7 @@
 <template>
   <g-link :to="post.path" class="card-container">
     <div class="post-card" v-bind:class="{ fullWidth: !post.featuredImage }">
-      <g-image v-if="post.featuredImage" v-bind:src="post.featuredImage" />
+      <g-image v-if="post.featuredImage" v-bind:src="post.featuredImage" v-bind:alt="post.title"/>
       <div>
         <p class="date" v-html="post.date" />
         <h1 class="title" v-html="post.title" />

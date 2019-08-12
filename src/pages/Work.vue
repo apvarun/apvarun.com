@@ -19,7 +19,7 @@
                 class="project-link"
               >Visit Project →</a>
             </div>
-            <g-image v-bind:src="projectItem.image" />
+            <g-image v-bind:src="projectItem.image" v-bind:alt="projectItem.name"/>
           </div>
         </a>
         <div class="join-line" v-bind:class="{ inverted: !(index % 2) }" />

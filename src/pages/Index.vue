@@ -11,7 +11,7 @@
         <g-link class="link" to="/about">whoami <span>→</span></g-link>
       </div>
 
-      <g-image src="~/assets/illustration.png" />
+      <g-image src="~/assets/illustration.png" alt="Front-end tools" />
 
       <!-- <div class="cards">
         <div class="card">
