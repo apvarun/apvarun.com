@@ -14,6 +14,10 @@ query Post ($path: String!) {
     content
     date(format: "MMMM YYYY")
     timeToRead
+    excerpt
+    fileInfo {
+      path
+    }
   }
 }
 </page-query>
@@ -22,7 +26,16 @@ query Post ($path: String!) {
 export default {
   metaInfo() {
     return {
-      title: this.$page.post.title
+      title: this.$page.post.title + ' - Varun\'s Blog',
+      meta: [
+        { key: 'description', name: 'description', content: this.$page.post.excerpt },
+        { key: 'og:title', property: 'og:title', content: this.$page.post.title + ' - Varun\'s Blog' },
+        { key: 'og:description', property: 'og:description', content: this.$page.post.excerpt },
+        { key: 'og:url', property: 'og:url', content: 'https://apvarun.com/' + this.$page.post.fileInfo.path },
+        { key: 'twitter:title', property: 'twitter:title', content: this.$page.post.title + ' - Varun\'s Blog' },
+        { key: 'twitter:description', property: 'twitter:description', content: this.$page.post.excerpt },
+        { key: 'twitter:url', property: 'twitter:url', content: 'https://apvarun.com/' + this.$page.post.fileInfo.path },
+      ],
     };
   }
 };

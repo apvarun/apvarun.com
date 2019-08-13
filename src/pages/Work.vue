@@ -115,6 +115,10 @@ export default {
   },
   metaInfo: {
     title: 'Work - Varun A P',
+    meta: [
+      { key: 'og:title', property: 'og:title', content: 'Work - Varun A P' },
+      { key: 'twitter:title', property: 'twitter:title', content: 'Work - Varun A P' },
+    ],
   },
   filters: {
     padleft: (value) => {

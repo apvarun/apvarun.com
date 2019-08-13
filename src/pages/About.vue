@@ -57,7 +57,11 @@ export default {
     ]
   }),
   metaInfo: {
-    title: 'About me - Varun A P'
+    title: 'About me - Varun A P',
+    meta: [
+      { key: 'og:title', property: 'og:title', content: 'About me - Varun A P' },
+      { key: 'twitter:title', property: 'twitter:title', content: 'About me - Varun A P' },
+    ],
   }
 }
 </script>

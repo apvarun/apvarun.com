@@ -45,7 +45,11 @@ export default {
     BlogIcon,
   },
   metaInfo: {
-    title: 'Blog - Varun A P'
+    title: 'Blog - Varun A P',
+    meta: [
+      { key: 'og:title', property: 'og:title', content: 'Blog - Varun A P' },
+      { key: 'twitter:title', property: 'twitter:title', content: 'Blog - Varun A P' },
+    ],
   }
 }
 </script>
