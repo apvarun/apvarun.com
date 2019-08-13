@@ -58,4 +58,8 @@ export default function (Vue, { router, head, isClient }) {
   Vue.use(Fragment.Plugin);
 
   updateMetaTags(head)
+  head.script.push({
+    src: '/sw.js',
+    body: true
+  })
 }
