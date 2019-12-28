@@ -5,14 +5,23 @@
       <div>
         <h2 class="title-text">→ I'm Varun</h2>
         <p class="description">
-          Frontend developer at <a href="https://www.springboard.com" target="_blank">Springboard</a> based in
-          Bangalore. I spend my free time learning and building stuff for the web.
+          Frontend Engineer at
+          <a href="https://www.backbase.com" target="_blank">Backbase</a>, ex.
+          <a href="https://www.springboard.com" target="_blank">Springboard</a>.
+          I spend my free time learning and building stuff for the web.
         </p>
         <p>
-          <em>I love minimalistic designs with subtle transitions that deliver better user experiences, rather than fancy graphics & animations.</em>
+          <em
+            >I love minimalistic designs with subtle transitions that deliver
+            better user experiences, rather than fancy graphics &
+            animations.</em
+          >
         </p>
         <ul>
-          <fragment v-for="(capability, index) of capabilities" v-bind:key="index">
+          <fragment
+            v-for="(capability, index) of capabilities"
+            v-bind:key="index"
+          >
             <li>{{ capability.text }}</li>
             <SwiggleShape v-bind:color="capability.color" />
           </fragment>
@@ -54,15 +63,23 @@ export default {
         text: 'Tooling',
         color: '#fdd54f',
       },
-    ]
+    ],
   }),
   metaInfo: {
     title: 'About me - Varun A P',
     meta: [
-      { key: 'og:title', property: 'og:title', content: 'About me - Varun A P' },
-      { key: 'twitter:title', property: 'twitter:title', content: 'About me - Varun A P' },
+      {
+        key: 'og:title',
+        property: 'og:title',
+        content: 'About me - Varun A P',
+      },
+      {
+        key: 'twitter:title',
+        property: 'twitter:title',
+        content: 'About me - Varun A P',
+      },
     ],
-  }
+  },
 }
 </script>
 

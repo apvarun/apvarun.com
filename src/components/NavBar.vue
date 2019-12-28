@@ -8,12 +8,12 @@
 
       <ul>
         <li v-for="(linkItem, index) in navigationLinks" v-bind:key="index">
-          <g-link v-bind:to="linkItem.link" v-bind:exact="true" exact-active-class="active">
+          <g-link class="link" v-bind:to="linkItem.link" v-bind:exact="true" exact-active-class="active">
             {{ linkItem.title }}
           </g-link>
         </li>
         <li>
-          <g-link to="/blog" active-class="active">
+          <g-link class="link" to="/blog" active-class="active">
             Blog
           </g-link>
         </li>

@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 
 html {
+  --link: #438bff;
+  --link-dark: #1262e2;
+
   --text-color: black;
   --background-color: white;
   --light: #757575;
   --lighter: #F0F0F0;
-  --link: #438bff;
   --default-box-shadow: 0 5px 40px 0 rgba(0,0,0,.08);
 }
 
@@ -17,12 +19,10 @@ html, body {
   background-color: var(--background-color);
 }
 html.dark {
-  /* --background-color: #353941; */
   --text-color: white;
   --background-color: #141d26;
   --light: #8c959e;
   --lighter: #2f2f2f;
-  --default-box-shadow: 0 5px 40px 0 rgba(100,100,100,.25);
   --default-box-shadow: 0 5px 40px 0 rgba(0,0,0,0.75);
 }
 img, .postContent iframe {
@@ -33,8 +33,8 @@ img, .postContent iframe {
 }
 blockquote {
   margin-left: 10px;
-  border-left: .25rem solid #357bf3;
-  color: #357bf3;
+  border-left: .25rem solid var(--link-dark);
+  color: var(--link-dark);
   padding: 0 0 0 10px;
 }
 .postContent img {
@@ -46,4 +46,24 @@ h1, h2, h3, h4, h5, h6, p, strong, em, li, span, div {
 }
 a {
   color: var(--link);
+}
+a:not(.link):hover {
+  color: var(--link-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --text-color: white;
+    --background-color: #141d26;
+    --light: #8c959e;
+    --lighter: #2f2f2f;
+    --default-box-shadow: 0 5px 40px 0 rgba(0,0,0,0.75);
+  }
+  html.nodark {
+    --text-color: black;
+    --background-color: white;
+    --light: #757575;
+    --lighter: #F0F0F0;
+    --default-box-shadow: 0 5px 40px 0 rgba(0,0,0,.08);
+  }
 }
