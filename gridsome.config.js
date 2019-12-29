@@ -5,9 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Frontend Developer - Bangalore',
+  siteName: 'Frontend Engineer - Amsterdam',
   author: 'Varun A P',
-  siteDescription: 'Frontend JavaScript Developer from Bangalore building things for the web.',
+  siteDescription: 'Frontend JavaScript Engineer from Amsterdam building things for the web.',
   siteUrl: 'https://apvarun.com',
   plugins: [
     {
