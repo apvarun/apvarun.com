@@ -1,3 +1,3 @@
 # apvarun
 
-Source code for the Gatsby driven statically generated personal website
+Source code for the Gridsome(Vue JS based) driven statically generated personal website
