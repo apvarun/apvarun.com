@@ -34,7 +34,7 @@ But there was an area which I never explored.
 
 </div>
 
-![No Code Tools List](/assets/saas-tools.png)
+![No Code Tools List](./saas-tools.png)
 
 > In 2019 and moving forward, there is no need for you to build each and every feature. You can easily integrate a couple of tools and get stuff working.
 
@@ -49,7 +49,7 @@ Selling stuff online? You no longer need to deal with payments or data managemen
 
 Like the above examples, the No-Code or the Low-Code movement is also picking up traction as there are businesses that completely run on no-code tools and make thousands of dollars each month.
 
-![No Code Tools List](/assets/no-code-tools.png)
+![No Code Tools List](./no-code-tools.png)
 <em>List of some of the popular no-code tools</em>
 
 [Ben's](https://twitter.com/bentossell) Makerpad has an awesome list of tools which can help anyone build rich experiences in a couple of hours. Such tools open up doors for a whole new set of people to build internet businesses. Checkout the tools here: [Makerpad](https://www.makerpad.co/marketplace)
