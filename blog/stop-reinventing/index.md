@@ -9,7 +9,7 @@ As any other year, 2019 was also a big package of challenges, learnings, fun and
 
 // Logging
 
-✅ GraphQL on Server & Client － Got a change to experiment with Python/Graphene server and Apollo Client / React Apollo on a side-project
+✅ GraphQL on Server & Client － Got a chance to experiment with Python/Graphene server and Apollo Client / React Apollo on a side-project
 
 ✅ Trips － Three New Countries (Indonesia, Netherlands, Germany)
 
