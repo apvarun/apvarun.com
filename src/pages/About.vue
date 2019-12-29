@@ -1,38 +1,40 @@
 <template>
   <Layout>
-    <h1 class="page-heading">About Me <MeIcon /></h1>
-    <div class="container">
-      <div>
-        <h2 class="title-text">→ I'm Varun</h2>
-        <p class="description">
-          Frontend Engineer at
-          <a href="https://www.backbase.com" target="_blank">Backbase</a>, ex.
-          <a href="https://www.springboard.com" target="_blank">Springboard</a>.
-          I spend my free time learning and building stuff for the web.
-        </p>
-        <p>
-          <em
-            >I love minimalistic designs with subtle transitions that deliver
-            better user experiences, rather than fancy graphics &
-            animations.</em
-          >
-        </p>
-        <ul>
-          <fragment
-            v-for="(capability, index) of capabilities"
-            v-bind:key="index"
-          >
-            <li>{{ capability.text }}</li>
-            <SwiggleShape v-bind:color="capability.color" />
-          </fragment>
-        </ul>
-      </div>
-      <div>
-        <div class="image-card">
-          <img src="https://avatars.io/twitter/apvarun" alt="Varun" />
+    <fragment>
+      <h1 class="page-heading">About Me <MeIcon /></h1>
+      <div class="container">
+        <div>
+          <h2 class="title-text">→ I'm Varun</h2>
+          <p class="description">
+            Frontend Engineer at
+            <a href="https://www.backbase.com" target="_blank">Backbase</a>, ex.
+            <a href="https://www.springboard.com" target="_blank">Springboard</a
+            >. I spend my free time learning and building stuff for the web.
+          </p>
+          <p>
+            <em
+              >I love minimalistic designs with subtle transitions that deliver
+              better user experiences, rather than fancy graphics &
+              animations.</em
+            >
+          </p>
+          <ul>
+            <fragment
+              v-for="(capability, index) of capabilities"
+              v-bind:key="index"
+            >
+              <li>{{ capability.text }}</li>
+              <SwiggleShape v-bind:color="capability.color" />
+            </fragment>
+          </ul>
+        </div>
+        <div>
+          <div class="image-card">
+            <img src="https://avatars.io/twitter/apvarun" alt="Varun" />
+          </div>
         </div>
       </div>
-    </div>
+    </fragment>
   </Layout>
 </template>
 

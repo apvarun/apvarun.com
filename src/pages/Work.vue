@@ -1,30 +1,36 @@
 <template>
   <Layout>
-    <h1 class="page-heading">Work <WorkIcon /></h1>
-    <div class="projects">
-      <fragment v-for="(projectItem, index) in projects" v-bind:key="index">
-        <a v-bind:href="projectItem.link" target="_blank" rel="noopener">
-          <div class="project-item" v-bind:class="{ inverted: index % 2 }">
-            <div>
-              <div class="count">{{ index+1 | padleft }}</div>
-              <h2 class="title">{{ projectItem.name }}</h2>
-              <span class="swiggle">
-                <SwiggleShape v-bind:color="projectItem.underline_color" />
-              </span>
-              <p class="excerpt">{{ projectItem.excerpt }}</p>
-              <a
-                v-bind:href="projectItem.link"
-                rel="noopener"
-                target="_blank"
-                class="project-link"
-              >Visit Project →</a>
+    <fragment>
+      <h1 class="page-heading">Work <WorkIcon /></h1>
+      <div class="projects">
+        <fragment v-for="(projectItem, index) in projects" v-bind:key="index">
+          <a v-bind:href="projectItem.link" target="_blank" rel="noopener">
+            <div class="project-item" v-bind:class="{ inverted: index % 2 }">
+              <div>
+                <div class="count">{{ (index + 1) | padleft }}</div>
+                <h2 class="title">{{ projectItem.name }}</h2>
+                <span class="swiggle">
+                  <SwiggleShape v-bind:color="projectItem.underline_color" />
+                </span>
+                <p class="excerpt">{{ projectItem.excerpt }}</p>
+                <a
+                  v-bind:href="projectItem.link"
+                  rel="noopener"
+                  target="_blank"
+                  class="project-link"
+                  >Visit Project →</a
+                >
+              </div>
+              <g-image
+                v-bind:src="projectItem.image"
+                v-bind:alt="projectItem.name"
+              />
             </div>
-            <g-image v-bind:src="projectItem.image" v-bind:alt="projectItem.name"/>
-          </div>
-        </a>
-        <div class="join-line" v-bind:class="{ inverted: !(index % 2) }" />
-      </fragment>
-    </div>
+          </a>
+          <div class="join-line" v-bind:class="{ inverted: !(index % 2) }" />
+        </fragment>
+      </div>
+    </fragment>
   </Layout>
 </template>
 
@@ -117,13 +123,17 @@ export default {
     title: 'Work - Varun A P',
     meta: [
       { key: 'og:title', property: 'og:title', content: 'Work - Varun A P' },
-      { key: 'twitter:title', property: 'twitter:title', content: 'Work - Varun A P' },
+      {
+        key: 'twitter:title',
+        property: 'twitter:title',
+        content: 'Work - Varun A P',
+      },
     ],
   },
   filters: {
-    padleft: (value) => {
-      return ('00'+value).slice(-2);
-    }
+    padleft: value => {
+      return ('00' + value).slice(-2)
+    },
   },
   data: () => ({
     projects: [
@@ -159,7 +169,8 @@ export default {
       },
       {
         name: 'Poppy JS',
-        excerpt: 'Simple, Multipurpose Open Source Pop-in Messages for marketers, freelancers and hobbyists.',
+        excerpt:
+          'Simple, Multipurpose Open Source Pop-in Messages for marketers, freelancers and hobbyists.',
         link: 'https://github.com/apvarun/poppyjs',
         image: '/static/poppyjs.png',
         color: 'linear-gradient(135deg, #fdd54f, #f8049c)',
@@ -168,7 +179,8 @@ export default {
       },
       {
         name: 'Confs.space',
-        excerpt: 'Confs.Space is a platform to stash all the conference talks and showcase it with ease of access.',
+        excerpt:
+          'Confs.Space is a platform to stash all the conference talks and showcase it with ease of access.',
         link: 'https://confs.space/',
         image: '/static/confs-space.png',
         color: 'linear-gradient(135deg, #f74646, #1060ff)',

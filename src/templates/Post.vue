@@ -1,9 +1,14 @@
 <template>
   <Layout>
-    <g-link to="/blog" class="back-link">← Back to all posts</g-link>
-    <h2 class="title">{{$page.post.title}}</h2>
-    <p class="sub-text">Published in {{$page.post.date}} | {{$page.post.timeToRead}}-minute read</p>
-    <div class="postContent" v-html="$page.post.content"/>
+    <fragment>
+      <g-link to="/blog" class="back-link">← Back to all posts</g-link>
+      <h2 class="title">{{ $page.post.title }}</h2>
+      <p class="sub-text">
+        Published in {{ $page.post.date }} | {{ $page.post.timeToRead }}-minute
+        read
+      </p>
+      <div class="postContent" v-html="$page.post.content" />
+    </fragment>
   </Layout>
 </template>
 
@@ -26,19 +31,47 @@ query Post ($path: String!) {
 export default {
   metaInfo() {
     return {
-      title: this.$page.post.title + ' - Varun\'s Blog',
+      title: this.$page.post.title + " - Varun's Blog",
       meta: [
-        { key: 'description', name: 'description', content: this.$page.post.excerpt },
-        { key: 'og:title', property: 'og:title', content: this.$page.post.title + ' - Varun\'s Blog' },
-        { key: 'og:description', property: 'og:description', content: this.$page.post.excerpt },
-        { key: 'og:url', property: 'og:url', content: 'https://apvarun.com/' + this.$page.post.fileInfo.path },
-        { key: 'twitter:title', property: 'twitter:title', content: this.$page.post.title + ' - Varun\'s Blog' },
-        { key: 'twitter:description', property: 'twitter:description', content: this.$page.post.excerpt },
-        { key: 'twitter:url', property: 'twitter:url', content: 'https://apvarun.com/' + this.$page.post.fileInfo.path },
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.post.excerpt,
+        },
+        {
+          key: 'og:title',
+          property: 'og:title',
+          content: this.$page.post.title + " - Varun's Blog",
+        },
+        {
+          key: 'og:description',
+          property: 'og:description',
+          content: this.$page.post.excerpt,
+        },
+        {
+          key: 'og:url',
+          property: 'og:url',
+          content: 'https://apvarun.com/' + this.$page.post.fileInfo.path,
+        },
+        {
+          key: 'twitter:title',
+          property: 'twitter:title',
+          content: this.$page.post.title + " - Varun's Blog",
+        },
+        {
+          key: 'twitter:description',
+          property: 'twitter:description',
+          content: this.$page.post.excerpt,
+        },
+        {
+          key: 'twitter:url',
+          property: 'twitter:url',
+          content: 'https://apvarun.com/' + this.$page.post.fileInfo.path,
+        },
       ],
-    };
-  }
-};
+    }
+  },
+}
 </script>
 
 <style scoped>

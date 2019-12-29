@@ -1,10 +1,16 @@
 <template>
   <Layout>
-    <h1 class="page-heading">Blog <BlogIcon /></h1>
-    <section class="posts">
-      <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
-      <Pager :info="$page.allPost.pageInfo" :linkClass="'page-link'"/>
-    </section>
+    <fragment>
+      <h1 class="page-heading">Blog <BlogIcon /></h1>
+      <section class="posts">
+        <PostList
+          v-for="edge in $page.allPost.edges"
+          :key="edge.node.id"
+          :post="edge.node"
+        />
+        <Pager :info="$page.allPost.pageInfo" :linkClass="'page-link'" />
+      </section>
+    </fragment>
   </Layout>
 </template>
 
@@ -34,7 +40,7 @@ query Blog($page: Int) {
 </page-query>
 
 <script>
-import PostList from "../components/PostList"
+import PostList from '../components/PostList'
 import { Pager } from 'gridsome'
 import BlogIcon from '../assets/icons/blog-icon.svg'
 
@@ -48,9 +54,13 @@ export default {
     title: 'Blog - Varun A P',
     meta: [
       { key: 'og:title', property: 'og:title', content: 'Blog - Varun A P' },
-      { key: 'twitter:title', property: 'twitter:title', content: 'Blog - Varun A P' },
+      {
+        key: 'twitter:title',
+        property: 'twitter:title',
+        content: 'Blog - Varun A P',
+      },
     ],
-  }
+  },
 }
 </script>
 
@@ -70,7 +80,8 @@ export default {
   text-decoration: none;
   transition: 200ms ease-in all;
 }
-.page-link.active, .page-link:hover {
+.page-link.active,
+.page-link:hover {
   background-color: var(--lighter);
   color: var(--text-color);
 }
