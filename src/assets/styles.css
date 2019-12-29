@@ -51,6 +51,14 @@ a:not(.link):hover {
   color: var(--link-dark);
 }
 
+.half-width {
+  max-width: 75%;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     --text-color: white;

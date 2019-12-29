@@ -13,9 +13,10 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "blog/**/*.md",
+        baseDir: "./blog",
+        pathPrefix: "/blog",
+        path: "**/*.md",
         typeName: "Post",
-        resolveAbsolutePaths: true,
       }
     },
     {
