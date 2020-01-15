@@ -16,12 +16,12 @@ function updateMetaTags(head) {
   head.meta.push({
     key: 'og:title',
     property: 'og:title',
-    content: 'Frontend Developer - Bangalore'
+    content: 'Frontend Engineer - Amsterdam'
   })
   head.meta.push({
     key: 'og:description',
     property: 'og:description',
-    content: 'Frontend JavaScript Developer from Bangalore building things for the web.'
+    content: 'Frontend JavaScript Engineer from Amsterdam building things for the web.'
   })
   head.meta.push({
     property: 'og:image',
@@ -39,12 +39,12 @@ function updateMetaTags(head) {
   head.meta.push({
     key: 'twitter:title',
     property: 'twitter:title',
-    content: 'Frontend Developer - Bangalore'
+    content: 'Frontend Engineer - Amsterdam'
   })
   head.meta.push({
     key: 'twitter:description',
     property: 'twitter:description',
-    content: 'Frontend JavaScript Developer from Bangalore building things for the web.'
+    content: 'Frontend JavaScript Engineer from Amsterdam building things for the web.'
   })
   head.meta.push({
     property: 'twitter:image',
