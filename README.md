@@ -1,3 +1,3 @@
-# apvarun
+# APVARUN
 
-Source code for the Gridsome(Vue JS based) driven statically generated personal website
+Source code for my personal website

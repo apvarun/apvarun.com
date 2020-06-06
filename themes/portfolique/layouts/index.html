@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div
+  class="relative pt-16 pb-32 flex content-center items-center justify-center"
+  style="min-height: 100vh;"
+>
+  <div
+    class="absolute top-0 w-full h-full bg-center bg-cover"
+    style="
+      background-image: url('{{ .Site.Params.headerImage }}');
+    "
+  >
+    <span
+      id="blackOverlay"
+      class="w-full h-full absolute {{ if .Site.Params.headerImage }} opacity-75 bg-black {{else}} bg-black {{end}}"
+    ></span>
+  </div>
+  {{ if .Site.Params.Homepage.Cover.Image }}
+  <div class="absolute flex justify-center md:justify-end md:items-center md:top-auto top-0 md:pt-0 pt-32">
+  <img
+    src="{{ .Site.Params.Homepage.Cover.Image }}"
+    alt="{{.Site.Title}}"
+    class="w-8/12 md:w-6/12 right-0 top-0 z-0 object-contain"
+    style="filter: grayscale(100%);"/>
+  </div>
+  {{ end }}
+  <div class="container relative mx-auto">
+    <div class="items-center flex flex-wrap">
+      <div class="w-full lg:w-9/12 px-4 ml-auto mr-auto md:mt-auto mt-64">
+        <div class="z-10">
+          <h1 class="text-white font-extrabold text-5xl z-10 text-shadow">
+            {{ .Site.Params.Homepage.Cover.title }}
+          </h1>
+          <p class="mt-4 text-4xl md:text-5xl font-medium text-gray-300 z-10 text-shadow">
+            {{ .Site.Params.Homepage.Cover.subtitle }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ if .Content }}
+<article class="text-center text-gray-700 p-4">
+  {{ .Content }}
+</article>
+{{ end }}
+
+{{- partial "expertise.html" . -}}
+{{- partial "latest-project.html" . -}}
+{{- partial "social-profiles.html" . -}}
+{{ end }}

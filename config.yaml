@@ -1,0 +1,42 @@
+baseURL: "https://apvarun-blog.now.sh/"
+languageCode: "en-us"
+title: "Varun A P"
+theme: "portfolique"
+paginate: 6
+summaryLength: 30
+
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.7
+
+params:
+  title: "Frontend Engineer - Amsterdam"
+  description: "Frontend JavaScript Engineer from Amsterdam building things for the web."
+  author: Varun A P
+  image: preview.png
+  twitterId: apvarun
+  headerImage: 
+  homepage:
+    cover:
+      title: Hi! 👋🏻
+      subtitle: I'm a Frontend Engineer from Amsterdam. I spend my time learning and building stuff for the web.
+      image: "/varun.png"
+    skills: ["UI Development", "Web Performance", "Web Design", "Tooling"]
+  menu:
+    - name: "About"
+      link: "/about"
+    - name: "Projects"
+      link: "/projects"
+    - name: "Blog"
+      link: "/blog"
+      button: true
+  social:
+    - name: Twitter
+      link: https://twitter.com/apvarun
+    - name: Dribbble
+      link: https://dribbble.com/apvarun
+    - name: Github
+      link: https://github.com/apvarun
+    - name: Codepen
+      link: https://codepen.io/apvarun

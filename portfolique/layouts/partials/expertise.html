@@ -1,0 +1,13 @@
+<section class="pb-2 relative block bg-black">
+  <div class="container mx-auto p-4 md:p-8">
+    <div class="flex flex-wrap my-4 justify-center">
+      {{ range .Site.Params.Homepage.skills }}
+      <div class="w-full lg:w-3/12 px-4 md:text-center">
+        <h6 class="text-3xl lg:text-2xl font-semibold text-white">
+          {{ . }}
+        </h6>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

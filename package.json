@@ -1,22 +1,25 @@
 {
-  "name": "portfolio",
-  "private": true,
+  "name": "portfolique-theme",
+  "version": "1.0.0",
+  "description": "Portfolio Theme using Tailwind",
+  "main": "index.js",
+  "author": "Varun A P",
+  "license": "MIT",
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore"
-  },
-  "dependencies": {
-    "gridsome": "^0.7.12",
-    "vue-fragment": "^1.5.1"
+    "start": "hugo --gc"
   },
   "devDependencies": {
-    "gridsome-plugin-feed": "^1.0.2",
-    "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@gridsome/plugin-sitemap": "^0.2.3",
-    "@gridsome/remark-prismjs": "^0.1.0",
-    "@gridsome/source-filesystem": "^0.6.0",
-    "@gridsome/transformer-remark": "^0.3.2",
-    "vue-svg-loader": "^0.12.0"
-  }
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "autoprefixer": "^9.7.6",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.1",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.4.0"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }
