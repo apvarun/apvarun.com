@@ -17,7 +17,7 @@ Overall, it is an advancement to the entire web, reaching far more countries and
 
 ### Ok. So?
 
-I've built a bunch of JAMStack sites (mostly for fun, some for work) using various tools and frameworks from Gatsby, Sapper, Hugo, VuePress and more. Among those sites, only a very few actually conceptualize JAMStack's potential. I mean, anyone can build a 5 page website with just HTML, CSS and maybe a bit of JS. We did that for years without any of the tools that we have at our disposal.
+I've built a bunch of JAMStack sites (mostly for fun, some for work) using various tools and frameworks like Gatsby, Sapper, Hugo, VuePress and more. Among those sites, only a few actually conceptualize JAMStack's potential. I mean, anyone can build a 5 page website with just HTML, CSS and maybe a bit of JS. We did that for years without any of the tools that we have at our disposal.
 
 In this article, let's uncover more about a crucial part of any large website ▶️ `SEARCH` ◀
 
@@ -95,7 +95,7 @@ Finally, I decided to go with a client side implementation as it's of least effo
 
 In the first version of search for `confs.space`, I decided to go with [Lunrjs](https://lunrjs.com/guides/index_prebuilding.html). It was quite straight forward to implement as the index only includes a bunch of JSON objects with fields required for the search.
 
-Add the following lines for generating the index:
+Added the following lines for generating the index:
 
 ```
 {{- $.Scratch.Add "index" slice -}}
