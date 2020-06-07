@@ -17,7 +17,7 @@ Overall, it is an advancement to the entire web, reaching far more countries and
 
 ### Ok. So?
 
-I've built a bunch of JAMStack sites (mostly for fun, some for work) using various tools and frameworks from Gatsby, Hugo, Sapper, Hugo, VuePress and more. Among those sites, only a very few actually conceptualize JAMStack's potential. I mean, anyone can build a 5 page website with just HTML, CSS and maybe a bit of JS. We did that for years without any of the tools that we have at our disposal.
+I've built a bunch of JAMStack sites (mostly for fun, some for work) using various tools and frameworks from Gatsby, Sapper, Hugo, VuePress and more. Among those sites, only a very few actually conceptualize JAMStack's potential. I mean, anyone can build a 5 page website with just HTML, CSS and maybe a bit of JS. We did that for years without any of the tools that we have at our disposal.
 
 In this article, let's uncover more about a crucial part of any large website ▶️ `SEARCH` ◀
 
