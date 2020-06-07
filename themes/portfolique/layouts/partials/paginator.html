@@ -89,7 +89,7 @@
       {{ if eq ($.Scratch.Get "page_number_flag") true }}
         <a href="{{ .URL }}">
           <li
-            class="relative block py-2 px-4 leading-tight bg-white border border-gray-300 border-r-0 {{ if eq . $paginator }}bg-blue-700 text-white hover:bg-blue-800{{ else }}text-blue-700 hover:bg-gray-200{{end}}">
+            class="relative block py-2 px-4 leading-tight bg-white border border-gray-300 border-r-0 {{ if eq . $paginator }} bg-blue-700 text-white hover:bg-blue-800 {{ else }} text-blue-700 hover:bg-gray-200 {{end}}">
             {{ .PageNumber }}
           </li>
         </a>
