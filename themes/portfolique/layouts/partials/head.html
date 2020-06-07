@@ -11,7 +11,9 @@
 
 <title>{{ $title }}</title>
 
-<meta name="description" content="{{ default .Site.Params.Description .Description }}" />
+{{ $excerpt := default .Summary .Params.Excerpt }}
+{{ $description := default .Site.Params.Description (default .Description $excerpt) }}
+<meta name="description" content="{{ $description }}" />
 
 {{ if .Keywords }}
 <meta name="keywords" content="{{ delimit .Keywords "," }}" />
@@ -22,18 +24,21 @@
 {{ end }}
 
 
-<meta property="og:title" content="{{ $title }}">
-<meta property="og:description" content="{{ default .Site.Params.Description .Description }}">
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
 {{ $metaImage :=  default .Site.Params.Image .Params.coverImage }}
-<meta property="og:image" content="{{ printf "%s%s" .Site.BaseURL $metaImage }}">
-<meta property="og:url" content="{{ .Permalink }}">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="{{ printf "%s%s" .Site.BaseURL $metaImage }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta name="twitter:card" content="summary_large_image" />
 
-<meta property="og:site_name" content="{{ $title }}">
-<meta name="twitter:image:alt" content="{{ $title }}">
+<meta property="og:site_name" content="{{ $title }}" />
 {{ if .Site.Params.twitterId }}
-<meta name="twitter:site" content="@{{.Site.Params.twitterId}}">
+<meta name="twitter:site" content="@{{.Site.Params.twitterId}}" />
 {{ end }}
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:image" content="{{ printf "%s%s" .Site.BaseURL $metaImage }}" />
+<meta name="twitter:image:alt" content="{{ $title }}" />
 
 {{ hugo.Generator }}
 
