@@ -1,0 +1,7 @@
+[build]
+publish = "public"
+command = "npm install && hugo --minify --gc"
+
+[context.production.environment]
+HUGO_VERSION = "0.69.0"
+HUGO_ENV = "production"
