@@ -1,6 +1,6 @@
 ---
 title: Toastify JS
-image: /assets/projects/toastify-js.png
+image: /projects/toastify-js.png
 link: https://github.com/apvarun/toastify-js
 external: true
 date: 2017-06-01

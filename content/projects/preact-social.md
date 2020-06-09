@@ -1,6 +1,6 @@
 ---
 title: Preact Social
-image: /assets/projects/preact-social.png
+image: /projects/preact-social.png
 link: https://github.com/apvarun/preact-social
 external: true
 date: 2018-04-08

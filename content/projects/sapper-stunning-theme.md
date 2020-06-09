@@ -1,6 +1,6 @@
 ---
 title: Stunning Theme
-image: /assets/projects/sapper-stunning-theme.png
+image: /projects/sapper-stunning-theme.png
 link: https://github.com/apvarun/sapper-stunning-theme
 external: true
 date: 2020-01-08

@@ -56,11 +56,15 @@
       <div
         class="rounded overflow-hidden -mt-8 rounded mx-8 shadow-md bg-white"
       >
+        {{ $original := resources.Get .Params.CoverImage }}
+        {{ if $original }}
+        {{ $resized := $original.Resize "900x jpg" }}
         <img
           alt="{{ .Title }}"
-          class="align-middle max-w-full h-auto rounded-lg"
-          src="{{ .Params.CoverImage }}"
+          class="align-middle max-w-full h-auto rounded-lg mx-auto"
+          src="{{$resized.RelPermalink}}"
         />
+        {{ end }}
       </div>
       {{ end }}
       <p class="px-8 pt-8 lg:px-16 lg:pt-16 opacity-50">{{ .ReadingTime }} minute(s) read</p>

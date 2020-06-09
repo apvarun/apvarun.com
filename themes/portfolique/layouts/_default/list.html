@@ -60,11 +60,16 @@
                 class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-2 rounded-lg flex-1 justify-center"
                 style="transition: all 0.15s ease 0s;"
               >
+                {{ $original := resources.Get .Params.CoverImage }}
+                {{ if $original }}
+                {{ $resized := $original.Resize "500x" }}
                 <img
                   alt="{{ .Title }}"
                   class="align-middle border-none max-w-full h-auto rounded-lg"
-                  src="{{ .Params.CoverImage }}"
+                  src="{{$resized.RelPermalink}}"
+                  loading="lazy"
                 />
+                {{ end }}
               </div>
               <h5 class="text-xl font-semibold p-4 pb-0">{{ .Title }}</h5>
               {{ else }}

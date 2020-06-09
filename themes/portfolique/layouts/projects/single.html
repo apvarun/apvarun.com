@@ -57,11 +57,15 @@
           class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white mb-6 rounded-lg mx-auto"
           style="transition: all 0.15s ease 0s; max-width: 500px;"
         >
+          {{ $original := resources.Get .Params.Image }}
+          {{ if $original }}
+          {{ $resized := $original.Resize "800x" }}
           <img
             alt="{{ .Title }}"
             class="align-middle border-none max-w-full h-auto rounded-lg"
-            src="{{ .Params.Image }}"
+            src="{{$resized.RelPermalink}}"
           />
+          {{ end }}
         </div>
         <div class="p-16">
           {{ .Content }}

@@ -1,6 +1,6 @@
 ---
 title: Showcase theme for Hugo
-image: /assets/projects/showcase-hugo-theme.png
+image: /projects/showcase-hugo-theme.png
 link: https://github.com/apvarun/showcase-hugo-theme
 external: true
 date: 2020-06-07

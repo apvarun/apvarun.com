@@ -53,7 +53,11 @@
   <div class="container mx-auto px-4">
     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-32">
       <div class="absolute w-full px-4 flex justify-center">
-        <img alt="{{.Site.Title}}" src="{{.Params.photo}}" class="shadow-xl rounded h-auto align-middle border-none absolute -mx-auto -mt-16 w-32 lg:-mt-32 lg:w-64">
+        {{ $original := resources.Get .Params.photo }}
+        {{ if $original }}
+        {{ $resized := $original.Resize "400x" }}
+        <img alt="{{.Site.Title}}" src="{{$resized.RelPermalink}}" class="shadow-xl rounded h-auto align-middle border-none absolute -mx-auto -mt-16 w-32 lg:-mt-32 lg:w-64">
+        {{ end }}
       </div>
       <div class="px-8 py-8 lg:px-16 lg:py-16 pt-16 lg:pt-32 markdown">
         {{ .Content }}

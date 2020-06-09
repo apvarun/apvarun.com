@@ -1,6 +1,6 @@
 ---
 title: Rewind Components Library
-image: /assets/projects/rewind-components.png
+image: /projects/rewind-components.png
 link: https://rewind-components.apvarun.com/
 external: true
 date: 2019-05-25

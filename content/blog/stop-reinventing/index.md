@@ -2,7 +2,7 @@
 title: 'Stop reinventing the wheel'
 date: '2019-12-29'
 excerpt: 'One of the important things I learnt in 2019 as a developer is to not reinvent the wheel. Develop only the things that are completely custom solutions.'
-coverImage: /assets/blog/reinventing.png
+coverImage: /blog/reinventing.png
 ---
 
 As any other year, 2019 was also a big package of challenges, learnings, fun and new friendships. The year gave me a lot of new stuff to get excited about. Although I wasn't completely able to achieve my [goals](https://apvarun.com/blog/2019-year-goals) for the year, I was able to get to some of them. And also had some unexpected ones making into the list.

@@ -4,11 +4,15 @@
   <div class="container mx-auto px-4">
     <div class="items-center flex flex-wrap">
       <div class="w-full md:w-6/12 ml-auto mr-auto px-4 pb-2">
+        {{ $original := resources.Get .Params.Image }}
+        {{ if $original }}
+        {{ $resized := $original.Resize "500x" }}
         <img
           alt="..."
           class="max-w-full rounded-lg shadow-lg"
-          src="{{ .Params.Image }}"
+          src="{{$resized.RelPermalink}}"
         />
+        {{ end }}
       </div>
       <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
         <div class="md:pr-12">

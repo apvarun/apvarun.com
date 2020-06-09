@@ -1,6 +1,6 @@
 ---
 title: Starter Grid
-image: /assets/projects/StarterGrid.jpeg
+image: /projects/StarterGrid.jpeg
 link: https://startergrid.apvarun.com/
 external: true
 date: 2018-06-01

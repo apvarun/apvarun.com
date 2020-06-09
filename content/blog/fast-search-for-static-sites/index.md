@@ -2,7 +2,7 @@
 title: "Fast Search for Static Sites (JAMStack)"
 date: "2020-06-07"
 excerpt: ""
-coverImage: "/assets/blog/jamstack-search.png"
+coverImage: "/blog/jamstack-search.png"
 ---
 
 ## The JAMStack revolution is already here!

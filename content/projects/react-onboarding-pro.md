@@ -1,6 +1,6 @@
 ---
 title: React Onboarding Pro
-image: /assets/projects/react-onboarding-pro.png
+image: /projects/react-onboarding-pro.png
 link: https://github.com/apvarun/react-onboarding-pro
 external: true
 date: 2019-10-14

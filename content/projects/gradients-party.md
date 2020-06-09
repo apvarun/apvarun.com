@@ -1,6 +1,6 @@
 ---
 title: Gradients Party
-image: /assets/projects/GradientsParty.jpeg
+image: /projects/GradientsParty.jpeg
 link: https://gradients.party/
 external: true
 date: 2018-01-01

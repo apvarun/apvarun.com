@@ -1,6 +1,6 @@
 ---
 title: Learn Dev Tools
-image: /assets/projects/learndevtools.png
+image: /projects/learndevtools.png
 link: https://github.com/apvarun/learndevtools
 external: true
 date: 2019-05-28
