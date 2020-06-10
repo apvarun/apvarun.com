@@ -52,26 +52,13 @@
     <div class="justify-center flex flex-wrap">
       <div class="w-full lg:w-12/12 px-4 -mt-32">
         <div class="flex flex-wrap">
-          {{ range .Pages }}
-          <a href={{ .Permalink }} class="w-full lg:w-4/12 px-4 h-full mb-4">
-            <div
-              class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg"
-              style="transition: all 0.15s ease 0s;"
-            >
-            {{ $original := resources.Get .Params.Image }}
-            {{ if $original }}
-            {{ $resized := $original.Resize "500x" }}
-              <img
-                alt="{{ .Title }}"
-                class="align-middle border-none max-w-full h-auto rounded-lg object-contain"
-                style="height: 250px"
-                src="{{$resized.RelPermalink}}"
-                loading="lazy"
-              />
-            {{ end }}
-            </div>
-            <h5 class="text-xl font-semibold pb-4 text-center mt-auto">{{ .Title }}</h5>
-          </a>
+          {{ $featuredPages := where .Pages ".Params.featured" true }}
+          {{ range $featuredPages }}
+            {{- partial "project-card.html" . -}}
+          {{ end }}
+          {{ $otherPages := where .Pages ".Params.featured" "!=" true }}
+          {{ range $otherPages }}
+            {{- partial "project-card.html" . -}}
           {{ end }}
         </div>
       </div>
