@@ -13,9 +13,9 @@ sitemap:
 
 params:
   title: "Frontend Engineer - Amsterdam"
-  description: "Frontend JavaScript Engineer from Amsterdam building things for the web."
+  description: "Frontend Engineer from Amsterdam building things for the web."
   author: Varun A P
-  image: preview.png
+  image: /preview.png
   twitterId: apvarun
   headerImage: 
   homepage:
@@ -41,3 +41,23 @@ params:
       link: https://github.com/apvarun
     - name: Codepen
       link: https://codepen.io/apvarun
+  schema:
+    nationality: Indian
+    gender: Male
+    jobTitle: Frontend Engineer
+    work:
+      name: Backbase
+      links:
+        - https://www.backbase.com/
+        - https://twitter.com/backbase
+        - https://www.linkedin.com/company/backbase
+        - https://nl.wikipedia.org/wiki/Backbase
+    image: /apvarun.jpg
+    education:
+      - name: Sri Ramakrishna Engineering College
+        link: http://www.srec.ac.in/
+    links:
+      - https://twitter.com/apvarun
+      - https://github.com/apvarun
+      - https://dribbble.com/apvarun
+      - https://codepen.io/apvarun

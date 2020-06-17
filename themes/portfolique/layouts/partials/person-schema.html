@@ -1,0 +1,44 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://www.schema.org",
+    "@type": "Person",
+    "@id": "{{ .Site.BaseURL }}/about",
+    "name": "{{ .Site.Params.Author }}",
+    "alternateName": "{{ default .Site.Params.Author .Site.Params.authorAlternateName }}",
+    "nationality": "{{ .Site.Params.schema.nationality }}",
+    "alumniOf": [
+      {{ $length := sub (len .Site.Params.schema.education) 1 }}
+      {{ range $i, $institute := .Site.Params.schema.education }}
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "{{ $institute.name }}",
+        "sameAs": "{{ $institute.link }}"
+      }{{ if ne $i $length }},{{ end }}
+      {{ end }}
+    ],
+    "gender": "{{ .Site.Params.schema.gender }}",
+    "Description": "{{ .Site.Params.Description }}",
+    "jobTitle": "{{ .Site.Params.schema.jobTitle }}",
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "{{ .Site.Params.schema.work.name }}",
+        "sameAs": [
+          {{ $length := sub (len .Site.Params.schema.work.links) 1 }}
+          {{ range $i, $link := .Site.Params.schema.work.links }}
+            {{$link}}{{ if ne $i $length }},{{ end }}
+          {{ end }}
+        ]
+      }
+    ],
+    "url": "{{ .Site.BaseURL }}",
+    {{ $original := resources.Get .Site.Params.schema.Image }}
+    "image": "{{ absURL $original.RelPermalink }}",
+    "sameAs": [
+      {{ $length := sub (len .Site.Params.schema.links) 1 }}
+      {{ range $i, $link := .Site.Params.schema.links }}
+        {{$link}}{{ if ne $i $length }},{{ end }}
+      {{ end }}
+    ]
+  }
+</script>

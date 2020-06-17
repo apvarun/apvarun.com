@@ -1,0 +1,77 @@
+<script type="application/ld+json">
+  [
+    {
+      "@context": "http://schema.org",
+      "@type": "Webpage",
+      "specialty": "{{ .Title }}",
+      "mainContentOfPage": {
+        "@context": "http://schema.org/",
+        "@type": "WebPageElement",
+        "cssSelector": ".markdown"
+      },
+      "primaryImageOfPage": "{{ default (absURL .Site.Params.Image) .Params.coverImage }}"
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}",
+      "additionalType": {{ .Site.Params.homepage.skills }},
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Params.Author }}",
+      "headline": "{{ .Site.Params.Description }}",
+      "image": "{{ absURL .Site.Params.Image }}",
+      "inLanguage": "{{ .Site.LanguageCode }}",
+      "author": "{{ .Site.Params.Author }}",
+      "description": "{{ .Site.Params.Description }}",
+      "isFamilyFriendly": "http://schema.org/True",
+      "publisher": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.Author }}"
+      },
+      "keywords": {{ .Site.Params.homepage.skills }},
+      "hasPart": [
+        {
+          "@context": "http://schema.org/",
+          "@type": "WPHeader",
+          "@id": "#header",
+          "headline": "headline-string",
+          "cssSelector": "nav ul",
+          "potentialAction": {
+            "@type": "Action",
+            "name": "Contact",
+            "target": "https://twitter.com/{{ .Site.Params.twitterId }}"
+          }
+        },
+        {
+          "@context": "http://schema.org/",
+          "@type": "WPFooter",
+          "cssSelector": "footer",
+          "@id": "#footer",
+          "copyrightHolder": "{{ .Site.Params.Author }}",
+          "publisher": "{{ .Site.Params.Author }}",
+          "copyrightYear": "2020"
+        }
+      ]
+    }
+  ]
+</script>
+<!-- 
+  NOTE: Despite the below snippet for SiteNavigationElements being totally seperate, it will be "sucked into" the above snippet for "Website" because of the matching @id of #header.
+  -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {{ $length := sub (len .Site.Params.menu) 1 }}
+      {{ range $i, $menu := .Site.Params.menu }}
+      {
+        "@context": "https://schema.org",
+        "@type": "SiteNavigationElement",
+        "@id": "#header",
+        "name": "{{ $menu.name }}",
+        "url": "{{ .Site.BaseURL }}{{ $menu.link }}"
+      }{{ if ne $i $length }},{{ end }}
+      {{ end }}
+    ]
+  }
+</script>
