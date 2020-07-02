@@ -15,6 +15,12 @@
   color: #000000;
 }
 
+@media (max-width: 1024px){
+  .fullWidthButton {
+    width: calc(100% - 24px);
+  }
+}
+
 /* Sharing Buttons */
 
 .resp-sharing-button__link,
