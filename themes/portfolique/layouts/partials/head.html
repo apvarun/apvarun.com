@@ -40,6 +40,11 @@
 <meta name="twitter:image" content="{{ printf "%s%s" .Site.BaseURL $metaImage }}" />
 <meta name="twitter:image:alt" content="{{ $title }}" />
 
+{{ with .Site.Params.webmentionUsername }}
+<link rel="webmention" href="https://webmention.io/{{ . }}/webmention" />
+<link rel="pingback" href="https://webmention.io/{{ . }}/xmlrpc" />
+{{ end }}
+
 {{ hugo.Generator }}
 
 {{ $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}

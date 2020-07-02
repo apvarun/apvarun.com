@@ -18,6 +18,7 @@ params:
   image: /preview.png
   twitterId: apvarun
   headerImage: 
+  webmentionUsername: apvarun.com
   homepage:
     cover:
       title: Hi! 👋🏻
