@@ -46,6 +46,11 @@
 .markdown li {
   @apply ml-4 py-1;
 }
+
+.about-content li:before {
+  content: '→ '
+}
+
 .markdown blockquote {
   @apply px-3 py-1 ml-2 border-l-2 text-gray-700;
 }

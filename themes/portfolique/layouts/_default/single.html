@@ -54,7 +54,7 @@
     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-32">
       {{ if .Params.CoverImage }}
       <div
-        class="rounded overflow-hidden -mt-8 rounded mx-8 shadow-md bg-white"
+        class="overflow-hidden -mt-8 rounded mx-8 shadow-md bg-white"
       >
         {{ $original := resources.Get .Params.CoverImage }}
         {{ if $original }}

@@ -73,7 +73,7 @@
               </div>
               <h5 class="text-xl font-semibold p-4 pb-0">{{ .Title }}</h5>
               {{ else }}
-              <h5 class="text-xl font-semibold p-4 h-full flex lg:justify-center lg:text-center items-center text-xl lg:text-3xl bg-gray-100 rounded">{{ .Title }}</h5>
+              <h5 class="font-semibold p-4 h-full flex lg:justify-center lg:text-center items-center text-xl lg:text-3xl bg-gray-100 rounded">{{ .Title }}</h5>
               {{ end }}
               {{ $excerpt := default .Summary .Params.Excerpt }}
               <p class="p-4 text-gray-700">{{ $excerpt }}</p>

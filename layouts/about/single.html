@@ -2,7 +2,7 @@
 
 <div
   class="relative pt-16 pb-16 flex content-center items-center justify-center"
-  style="height: 45vh; min-height: 400px"
+  style="height: 45vh; min-height: 400px;"
 >
   <div
     class="absolute top-0 w-full h-full bg-center bg-cover"
@@ -47,21 +47,35 @@
   </div>
 </div>
 
-
-
 <section class="relative py-16 bg-gray-300">
   <div class="container mx-auto px-4">
-    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-32">
+    <div
+      class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-32"
+    >
       <div class="absolute w-full px-4 flex justify-center">
         {{ $original := resources.Get .Params.photo }}
         {{ if $original }}
         {{ $resized := $original.Resize "400x" }}
-        <img alt="{{.Site.Title}}" src="{{$resized.RelPermalink}}" class="shadow-xl rounded h-auto align-middle border-none absolute -mx-auto -mt-16 w-32 lg:-mt-32 lg:w-64">
+        <img
+          alt="{{.Site.Title}}"
+          src="{{$resized.RelPermalink}}"
+          class="shadow-xl rounded h-auto align-middle border-none absolute -mx-auto -mt-16 w-32 lg:-mt-32 lg:w-64"
+        />
         {{ end }}
       </div>
-      <div class="px-8 py-8 lg:px-16 lg:py-16 pt-16 lg:pt-32 markdown">
+      <div class="px-8 py-8 lg:px-16 lg:py-16 pt-16 lg:pt-32 markdown about-content">
         {{ .Content }}
+        <blockquote class="none"></blockquote>
       </div>
+      <p class="px-8 pb-8 lg:px-16 lg:pb-16 text-xl">
+        Want to talk to me about frontend engineering, UI designing, or web
+        performance? Just get in touch with me －
+        <a
+          href="mailto:hey@apvarun.com"
+          class="text-3xl font-light no-underline hover:underline"
+          >hey@apvarun.com</a
+        >
+      </p>
     </div>
   </div>
 </section>
