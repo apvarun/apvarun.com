@@ -22,5 +22,19 @@
     {{ $highlightScript := $highlightScript| minify | fingerprint | resources.PostProcess }}
     <script src="{{ $highlightScript.Permalink }}" integrity="{{ $highlightScript.Data.Integrity }}"></script>
 {{ end }}
-<script>hljs.initHighlightingOnLoad();</script>
+<script>
+function highlightBlocks() {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+}
+document.addEventListener('DOMContentLoaded', highlightBlocks);
+</script>
+
+<script src="http://instantclick.io/v3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+InstantClick.init();
+InstantClick.on('change', highlightBlocks);
+</script>
+
 {{ template "_internal/google_analytics_async.html" . }}

@@ -11,13 +11,13 @@
   >
     <span
       id="blackOverlay"
-      class="w-full h-full absolute {{ if .Site.Params.headerImage }} opacity-75 bg-black {{else}} bg-black {{end}}"
+      class="w-full h-full absolute {{ if .Site.Params.headerImage }} opacity-75 bg-dark {{else}} bg-dark {{end}}"
     ></span>
   </div>
   {{ if .Site.Params.Homepage.Cover.Image }}
   {{ $original := resources.Get .Site.Params.Homepage.Cover.Image }}
   {{ if $original }}
-  {{ $resized := $original.Resize "900x jpg #000" }}
+  {{ $resized := $original.Resize "900x jpg #010102" }}
   <div class="absolute flex justify-center md:justify-end md:items-center md:top-auto top-0 md:pt-0 pt-32">
     <img
       src="{{$resized.RelPermalink}}"
